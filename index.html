@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudoku Kids</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="logo">✦ SUDOKU KIDS</div>
+      <p class="subtitle">Raqamlarni toping va mantiqingizni sinang!</p>
+    </header>
+
+    <section class="stats">
+      <div class="stat">
+        <span>BOSQICH</span>
+        <strong id="level">1 / 20</strong>
+      </div>
+      <div class="stat">
+        <span>XATOLAR</span>
+        <strong id="mistakes">0</strong>
+      </div>
+      <div class="stat">
+        <span>VAQT</span>
+        <strong id="timer">00:00</strong>
+      </div>
+    </section>
+
+    <section class="game-panel">
+      <div class="level-info">
+        <h2 id="levelTitle">1-bosqich</h2>
+        <p id="levelDescription">Bo‘sh kataklarni to‘g‘ri raqamlar bilan to‘ldiring.</p>
+      </div>
+
+      <div class="progress">
+        <div id="progressFill"></div>
+      </div>
+
+      <div id="board" class="board"></div>
+
+      <div class="number-title">RAQAMNI TANLANG</div>
+      <div id="numberPad" class="number-pad">
+        <button class="number-btn" data-number="1">1</button>
+        <button class="number-btn" data-number="2">2</button>
+        <button class="number-btn" data-number="3">3</button>
+        <button class="number-btn" data-number="4">4</button>
+      </div>
+
+      <div class="controls">
+        <button id="eraseBtn">⌫ O‘chirish</button>
+        <button id="hintBtn">✦ Yordam</button>
+        <button id="checkBtn">✓ Tekshirish</button>
+      </div>
+
+      <button id="nextBtn" class="next-btn" disabled>
+        Keyingi bosqich →
+      </button>
+    </section>
+
+    <section class="instructions">
+      <h3>O‘yin qoidalari</h3>
+      <p>1. Bo‘sh katakni tanlang.</p>
+      <p>2. Pastdagi 1, 2, 3 yoki 4 raqamidan birini bosing.</p>
+      <p>3. Har bir qator, ustun va 2×2 kvadratda raqamlar takrorlanmasligi kerak.</p>
+      <p>4. Barcha kataklarni to‘g‘ri to‘ldiring!</p>
+    </section>
+
+    <footer>
+      Loyiha muallifi:
+      <strong>AKRAMJONOVA JADRA MARATOVNA</strong>
+    </footer>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <div class="success-icon">✦</div>
+      <h2 id="modalTitle">Ajoyib!</h2>
+      <p id="modalText">Bosqich bajarildi!</p>
+      <button id="modalBtn">Keyingi bosqich</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
